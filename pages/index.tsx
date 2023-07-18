@@ -5,6 +5,7 @@ import Navbar from '@components/navbar';
 import HeroSection from '@modules/homepage/hero';
 import AllProduct from '@components/allproduct';
 import ProductCardWrapper from '@components/ProductcardWrapper';
+import FaqWrapper from '@components/faqwrapper';
 
 const Home: NextPage<IHomePageApi> = () => {
   return (
@@ -19,6 +20,7 @@ const Home: NextPage<IHomePageApi> = () => {
         <HeroSection />
         <AllProduct />
         <ProductCardWrapper />
+        <FaqWrapper />
       </main>
     </>
   );

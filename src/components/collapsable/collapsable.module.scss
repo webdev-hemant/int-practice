@@ -1,0 +1,76 @@
+.collapsableWrapper {
+  color: rgb(79, 88, 94);
+  border-bottom: 1px solid rgb(226, 236, 244) !important;
+  .collapsableInner {
+    padding: 0.625rem;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    .title {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 24px;
+      letter-spacing: 0px;
+      color: rgb(79, 88, 94);
+    }
+    .arrow {
+      padding: 0 1rem;
+      border: none;
+      &::after {
+        content: '>';
+        // font-family: 'FontAwesome';
+        font-size: 1rem;
+        color: inherit;
+      }
+      &.open {
+        transform: rotate(90deg);
+      }
+      &.close {
+        transform: rotate(360deg);
+      }
+    }
+  }
+  .paragraph {
+    transition: all 2s linear;
+    & > div {
+      transition: all 2s linear;
+    }
+    li {
+      margin-left: 2rem;
+    }
+    h2 {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: inherit;
+      margin-bottom: 10px;
+      color: rgb(79, 88, 94);
+    }
+    h3 {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: inherit;
+      margin-bottom: 10px;
+      color: rgb(79, 88, 94);
+    }
+    .heightZero {
+      height: 0 !important;
+      visibility: 0;
+      display: none;
+      transition: all 2s linear;
+    }
+    .nestedTitle {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: inherit;
+      margin-bottom: 10px;
+      color: rgb(79, 88, 94);
+    }
+    p {
+      padding: 0.625rem;
+      transition: all 0.3s linear;
+      color: rgba(0, 0, 0, 0.87);
+    }
+  }
+}
