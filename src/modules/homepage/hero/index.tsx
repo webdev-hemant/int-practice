@@ -3,6 +3,8 @@ import Image, { StaticImageData } from 'next/future/image';
 import priceTag from '@images/price-tag.png';
 import truck from '@images/truck.png';
 import certificate from '@images/certificate.png';
+import goldBar from '@images/20gm_bar_9999_front.png';
+import goldCoin from '@images/gold-coin.png';
 import styles from './hero.module.scss';
 
 const cardArr: {
@@ -42,7 +44,12 @@ const HeroSection: React.FC = () => {
             })}
           </div>
         </div>
-        <div className={styles.imgContainer}>hi</div>
+        <div className={styles.imgContainer}>
+          <div className={styles.allImgWrapper}>
+            <Image width={500} src={goldBar} alt="gold" />
+            <Image className={styles.coin} width={300} src={goldCoin} alt="gold coin" />
+          </div>
+        </div>
       </div>
     </div>
   );
