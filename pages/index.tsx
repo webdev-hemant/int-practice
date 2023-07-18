@@ -3,10 +3,9 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Navbar from '@components/navbar';
 import HeroSection from '@modules/homepage/hero';
+import AllProduct from '@components/allproduct';
 
 const Home: NextPage<IHomePageApi> = () => {
-  // const { apiCardData } = useAppSelector((state) => state.homeReducer);
-
   return (
     <>
       <Head>
@@ -17,6 +16,7 @@ const Home: NextPage<IHomePageApi> = () => {
       <main>
         <Navbar />
         <HeroSection />
+        <AllProduct />
       </main>
     </>
   );
