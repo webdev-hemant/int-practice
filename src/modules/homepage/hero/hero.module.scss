@@ -1,0 +1,5 @@
+.heroWrapper {
+  height: calc(100vh - 3.75rem);
+  background-color: aquamarine;
+  clip-path: polygon(0 0, 100% 0, 100% 44%, 0% 100%);
+}

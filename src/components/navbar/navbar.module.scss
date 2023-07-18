@@ -1,0 +1,64 @@
+.header {
+  background-color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 3.75rem;
+  // filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 2px 20px);
+  .img_wapper {
+    margin: 10px 50px;
+    position: relative;
+    cursor: pointer;
+
+    @media screen and (max-width: 768px) {
+      margin: 10px;
+    }
+    @media screen and (min-width: 375px) and (max-width: 992px) {
+    }
+  }
+  .links_container {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    gap: 20px;
+
+    &.showCondition {
+      li {
+        @media screen and (max-width: 992px) {
+          &:nth-child(1),
+          &:nth-child(2) {
+            display: none;
+          }
+        }
+      }
+    }
+    li {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 14px;
+      letter-spacing: 0.02em;
+      text-align: center;
+      color: rgb(0, 113, 188);
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      gap: 5px;
+      .loginSvg_wrapper {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        color: rgb(0, 113, 188);
+      }
+    }
+    .signup {
+      background-color: lightseagreen;
+      padding: 15px;
+      color: white;
+      border-radius: 4px;
+    }
+  }
+}
