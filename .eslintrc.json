@@ -1,0 +1,14 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": ["next", "next/core-web-vitals", "eslint:recommended", "plugin:@typescript-eslint/recommended"],
+  "globals": {
+    "React": "readonly"
+  },
+  "rules": {
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error"],
+    "max-lines": ["error", { "max": 400, "skipComments": true }],
+    "@typescript-eslint/ban-ts-comment": ["error", { "ts-ignore": "allow-with-description" }]
+  }
+}
