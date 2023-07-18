@@ -1,5 +1,42 @@
 .heroWrapper {
   height: calc(100vh - 3.75rem);
-  background-color: aquamarine;
-  clip-path: polygon(0 0, 100% 0, 100% 44%, 0% 100%);
+  .container {
+    padding: 0 2rem;
+    height: 100%;
+    display: flex;
+    // align-items: center;
+    justify-content: center;
+    clip-path: polygon(0 0, 100% 0, 100% 44%, 0% 100%);
+    background-color: aquamarine;
+    .textContainer {
+      margin-top: 4rem;
+      width: 50%;
+      h1 {
+        font-size: 2.5rem;
+      }
+      .smallCardWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 2rem;
+        .cardContainer {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          .cardImage {
+          }
+          .cardTitle {
+            text-align: center;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+    .imgContainer {
+      width: 50%;
+      height: 100%;
+      background-color: bisque;
+    }
+  }
 }
