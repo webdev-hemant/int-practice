@@ -32,9 +32,9 @@ const HeroSection: React.FC = () => {
         <div className={styles.textContainer}>
           <h1>Get 24k Gold delivered to your doorstep</h1>
           <div className={styles.smallCardWrapper}>
-            {cardArr.map((item) => {
+            {cardArr.map((item, index) => {
               return (
-                <div className={styles.cardContainer}>
+                <div key={index} className={styles.cardContainer}>
                   <div className={styles.cardImage}>
                     <Image width={50} height={50} src={item.img} alt="priceTag" />
                   </div>

@@ -24,8 +24,12 @@ const Navbar: React.FC = () => {
         <Image src={Logo} alt="img" />
       </div>
       <ul className={`${styles.links_container}`}>
-        {linkArr.map((item) => {
-          return <li className={item === 'Signup' ? styles.signup : ''}>{item}</li>;
+        {linkArr.map((item, index) => {
+          return (
+            <li key={index} className={item === 'Signup' ? styles.signup : ''}>
+              {item}
+            </li>
+          );
         })}
       </ul>
     </div>
