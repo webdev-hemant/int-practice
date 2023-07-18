@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Navbar from '@components/navbar';
 import HeroSection from '@modules/homepage/hero';
 import AllProduct from '@components/allproduct';
+import ProductCard from '@components/productcard';
 
 const Home: NextPage<IHomePageApi> = () => {
   return (
@@ -17,6 +18,7 @@ const Home: NextPage<IHomePageApi> = () => {
         <Navbar />
         <HeroSection />
         <AllProduct />
+        <ProductCard />
       </main>
     </>
   );
