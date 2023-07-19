@@ -6,6 +6,9 @@
   justify-content: space-between;
   min-height: 3.75rem;
   // filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 2px 20px);
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
   .img_wapper {
     margin: 10px 50px;
     position: relative;

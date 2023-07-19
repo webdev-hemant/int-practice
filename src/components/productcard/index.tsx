@@ -1,12 +1,12 @@
 import React from 'react';
-import Image from 'next/future/image';
+import Image, { StaticImageData } from 'next/future/image';
 import percentageSvg from '@images/percent-svgrepo-com.svg';
 import firstCoin from '@images/1gm_back.png';
 import secondCoin from '@images/5gm_coin_999_front.png';
 import thirdCoin from '@images/5gm_front.png';
 import styles from './productcard.module.scss';
 
-const ImageArr = [firstCoin, secondCoin, thirdCoin];
+const ImageArr: StaticImageData[] = [firstCoin, secondCoin, thirdCoin];
 
 const ProductCard: React.FC = () => {
   return (

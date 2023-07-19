@@ -46,8 +46,8 @@ const HeroSection: React.FC = () => {
         </div>
         <div className={styles.imgContainer}>
           <div className={styles.allImgWrapper}>
-            <Image width={500} src={goldBar} alt="gold" />
-            <Image className={styles.coin} width={300} src={goldCoin} alt="gold coin" />
+            <Image width={200} src={goldBar} alt="gold" />
+            <Image className={styles.coin} width={100} src={goldCoin} alt="gold coin" />
           </div>
         </div>
       </div>
