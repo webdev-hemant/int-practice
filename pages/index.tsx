@@ -13,7 +13,7 @@ const Home: NextPage<IHomePageApi> = () => {
       <Head>
         <title>Safe gold</title>
         <meta name="description" content="write your description here..." />
-        <link rel="shortcut icon" href="/icons/favicon.png" type="image/x-icon" />
+        <link rel="shortcut icon" href="/icons/logo.svg" type="image/x-icon" />
       </Head>
       <main>
         <Navbar />
