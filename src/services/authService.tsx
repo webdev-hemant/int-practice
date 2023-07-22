@@ -1,5 +1,5 @@
-import { FirebaseApp, getApp } from 'firebase/app';
-import { signInWithPopup, getAuth, GoogleAuthProvider, signOut, onAuthStateChanged } from 'firebase/auth';
+import { FirebaseApp } from 'firebase/app';
+import { signInWithPopup, getAuth, GoogleAuthProvider, signOut, onAuthStateChanged, User } from 'firebase/auth';
 import firebaseApp from 'src/config/firebase.config';
 
 class AuthService {
@@ -8,7 +8,7 @@ class AuthService {
     this.auth = getAuth(firebaseApp);
   }
 
-  waitForUser(callback: Function) {
+  waitForUser(callback: (user: User | null) => void) {
     return onAuthStateChanged(this.auth, (userCred) => {
       callback(userCred);
     });

@@ -10,7 +10,7 @@ import { withPublic } from 'src/hook/route';
 
 const Home: NextPage<IHomePageApi> = (props) => {
   const { auth } = props;
-  const { user, loginWithGoogle, error, logout } = auth;
+  const { user, loginWithGoogle, logout } = auth;
   console.log({ user: user?.displayName });
   return (
     <>
