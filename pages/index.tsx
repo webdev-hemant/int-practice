@@ -6,8 +6,12 @@ import HeroSection from '@modules/homepage/hero';
 import AllProduct from '@components/allproduct';
 import ProductCardWrapper from '@components/ProductcardWrapper';
 import FaqWrapper from '@components/faqwrapper';
+import { withPublic } from 'src/hook/route';
 
-const Home: NextPage<IHomePageApi> = () => {
+const Home: NextPage<IHomePageApi> = (props) => {
+  const { auth } = props;
+  const { user, loginWithGoogle, error, logout } = auth;
+  console.log({ user: user?.displayName });
   return (
     <>
       <Head>
@@ -16,7 +20,7 @@ const Home: NextPage<IHomePageApi> = () => {
         <link rel="shortcut icon" href="/icons/logo.svg" type="image/x-icon" />
       </Head>
       <main>
-        <Navbar />
+        <Navbar loginWithGoogle={loginWithGoogle} logout={logout} disPlayName={user?.displayName} />
         <HeroSection />
         <AllProduct />
         <ProductCardWrapper />
@@ -26,7 +30,7 @@ const Home: NextPage<IHomePageApi> = () => {
   );
 };
 
-export default Home;
+export default withPublic(Home);
 
 // export const getServerSideProps: GetServerSideProps = wrapper.getServerSideProps((store) => async () => {
 //   await store.dispatch();

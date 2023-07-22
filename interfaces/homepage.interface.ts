@@ -1,1 +1,3 @@
-export interface IHomePageApi {}
+export interface IHomePageApi {
+  auth: any;
+}
